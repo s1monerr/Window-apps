@@ -14,10 +14,6 @@ public class Circle implements Figure{
         }
     }
 
-    public Circle() {
-        ;
-    }
-
     @Override
     public double calculateArea() {
         return Math.PI*r*r;
@@ -35,7 +31,4 @@ public class Circle implements Figure{
         System.out.println("Perimeter: "+calculatePerimeter()+", area: "+calculateArea());
     }
 
-//    public void setR(double R){
-//        this.r = R;
-//    }
 }

@@ -84,15 +84,15 @@ public class UI {
                 case 1:
                     System.out.println("Enter a:");
                     System.out.print("<");
-                    double a = scanner.nextDouble();
+                    double a = Double.valueOf(scanner.nextLine()); // valueof - scanner already used for switch
 
                     System.out.println("Enter b:");
                     System.out.print("<");
-                    double b = scanner.nextDouble();
+                    double b = Double.valueOf(scanner.nextLine());
 
                     System.out.println("Enter c:");
                     System.out.print("<");
-                    double c = scanner.nextDouble();
+                    double c = Double.valueOf(scanner.nextLine());
 
                     triangle = new Triangle(a, b, c);
                     break;
@@ -126,12 +126,13 @@ public class UI {
         printInnerMenu();
         while(run) {
             System.out.print("\033[H\033[2J");
+
             printInnerMenu();
             switch (getKey()) {
                 case 1:
                     System.out.println("Enter r:");
                     System.out.print("<");
-                    double r = scanner.nextDouble();
+                    double r = Double.valueOf(scanner.nextLine());
                     circle = new Circle(r);
 
                     break;
@@ -166,9 +167,9 @@ public class UI {
             System.out.print("\033[H\033[2J");
             switch (getKey()) {
                 case 1:
-                    System.out.println("Enter r:");
+                    System.out.println("Enter a:");
                     System.out.print("<");
-                    double a = scanner.nextDouble();
+                    double a = Double.valueOf(scanner.nextLine());
                     square = new Square(a);
 
                     break;
@@ -199,19 +200,19 @@ public class UI {
     public void prismCalc(){
 
         System.out.println("Enter prism height: ");
-        double H = scanner.nextDouble();
+        double H = Double.valueOf(scanner.nextLine());
 
         System.out.println("Choose a base figure for prism: ");
         System.out.println("1. Triangle");
         System.out.println("2. Square");
         System.out.println("3. Circle");
 
-        int shapeChoice = scanner.nextInt();
+       // int shapeChoice = scanner.nextInt();
         // choosing base for prism
-        switch (shapeChoice){
+        switch (getKey()){
             case 1:
                 System.out.println("Enter a:");
-                double x = scanner.nextDouble();
+                double x = Double.valueOf(scanner.nextLine());
                 triangle = new Triangle(x); // equilateral triangle
 
                 prism = new Prism(triangle, H);
@@ -219,7 +220,7 @@ public class UI {
 
             case 2:
                 System.out.println("Enter a:");
-                double a = scanner.nextDouble();
+                double a = Double.valueOf(scanner.nextLine());
                 square = new Square(a);
 
                 prism = new Prism(square, H);
@@ -227,7 +228,7 @@ public class UI {
 
             case 3:
                 System.out.println("Enter r:");
-                double r = scanner.nextDouble();
+                double r = Double.valueOf(scanner.nextLine());
                 circle = new Circle(r);
 
                 prism = new Prism(circle, H);

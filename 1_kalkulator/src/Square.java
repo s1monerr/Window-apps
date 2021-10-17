@@ -14,11 +14,6 @@ public class Square implements Figure{
         }
     }
 
-    public Square() {
-        ;
-    }
-
-
     @Override
     public double calculateArea() {
         return Math.pow(a, 2);
@@ -36,7 +31,4 @@ public class Square implements Figure{
         System.out.println("Perimeter: "+calculatePerimeter()+", area: "+calculateArea());
     }
 
-//    public void setA(double A) {
-//        this.a = a;
-//    }
 }
