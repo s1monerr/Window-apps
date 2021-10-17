@@ -4,8 +4,18 @@ public class Square implements Figure{
 
     private double a;
 
-    public Square(double A){
-        this.a = A;
+    public Square(double A) {
+        if (A <= 0) {
+            System.out.println("Error: value must be positive. ");
+            this.a = 0;
+        }
+        else {
+            this.a = A;
+        }
+    }
+
+    public Square() {
+        ;
     }
 
 
@@ -23,6 +33,10 @@ public class Square implements Figure{
     public void print() {
         System.out.println("SQUARE INFO: ");
         System.out.println("Square, a = : "+a);
-        System.out.println("Perimeter: ' "+calculatePerimeter()+", area: "+calculateArea());
+        System.out.println("Perimeter: "+calculatePerimeter()+", area: "+calculateArea());
     }
+
+//    public void setA(double A) {
+//        this.a = a;
+//    }
 }

@@ -4,8 +4,14 @@ public class Circle implements Figure{
 
     private double r;
 
-    Circle(double R){
-        this.r = R;
+    Circle(double R) {
+        if (R <= 0) {
+            System.out.println("Error: radius must be positive.");
+            this.r = 0;
+        }
+        else {
+            this.r = R;
+        }
     }
 
     public Circle() {
@@ -26,10 +32,10 @@ public class Circle implements Figure{
     public void print() {
         System.out.println("CIRCLE INFO: ");
         System.out.println("Circle, radius = : "+r);
-        System.out.println("Perimeter: ' "+calculatePerimeter()+", area: "+calculateArea());
+        System.out.println("Perimeter: "+calculatePerimeter()+", area: "+calculateArea());
     }
 
-    public void setR(double R){
-        this.r = R;
-    }
+//    public void setR(double R){
+//        this.r = R;
+//    }
 }

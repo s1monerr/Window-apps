@@ -18,4 +18,10 @@ public class Prism{
         return base.calculateArea()*2 + base.calculatePerimeter()*height;
     }
 
+    public void print(){
+        System.out.print("Base shape: ");
+        base.print();
+        System.out.println("Prism base height: "+height+", volume: "+calculateVolume()+", area: "+calculateArea());
+    }
+
 }

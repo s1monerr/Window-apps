@@ -1,11 +1,11 @@
 public interface Figure {
 
     // calculate area
-    public double calculateArea();
+    double calculateArea();
 
     // calculate perimeter
-    public double calculatePerimeter();
+    double calculatePerimeter();
 
     // printing
-    public void print();
+    void print();
 }
