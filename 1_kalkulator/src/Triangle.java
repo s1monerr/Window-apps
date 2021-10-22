@@ -64,16 +64,5 @@ public class Triangle implements Figure{
         System.out.println("Perimeter: "+calculatePerimeter()+", area: "+calculateArea());
     }
 
-//    public void setA(double A){
-//        this.a = A;
-//    }
-//
-//    public void setB(double B){
-//        this.b = B;
-//    }
-//
-//    public void setC(double C){
-//        this.c = C;
-//    }
 
 }
