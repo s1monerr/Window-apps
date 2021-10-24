@@ -30,7 +30,7 @@ public class Student implements Comparable<Student>{
         System.out.println("==========");
         System.out.print("STUDENT'S INFO: ");
         System.out.println("Name: "+name+", surname: "+surname+", born in "+yearOfBirth);
-        System.out.println("Student's condition: "+studentCondition);
+        System.out.println("Student's condition: "+studentCondition+" , SCORE: "+score);
     }
 
     public void addPoints(double points){
@@ -47,5 +47,17 @@ public class Student implements Comparable<Student>{
 
     public String getSurname() {
         return surname;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public StudentCondition getCondition(){
+        return studentCondition;
     }
 }

@@ -1,11 +1,11 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Comparator;
+import java.util.*;
 
 public class Class {
     private String name;
-    private final List<Student> studentList;
-    private final int studentsLimit;
+
+
+    private List<Student> studentList;
+    public final int studentsLimit;
 
     public Class(String name, int studentsLimit){
         this.name = name;
@@ -39,6 +39,19 @@ public class Class {
         }
     }
 
+    public void getStudent(Student student){
+        if(student.getScore() == 0) {
+            System.out.println("Student with no points - deleted successfully");
+            studentList.remove(student);
+            student = null;
+        }
+
+        else{
+            studentList.remove(student);
+        }
+
+    }
+
     public void changeCondition(Student student, StudentCondition condition){
         if (studentList.contains(student)) {
             student.setCondition(condition);
@@ -59,13 +72,43 @@ public class Class {
         }
     }
 
-//    public Student search(String surname){
-//
-//    }
+    public Student search(String surname){
+        Student temp = new Student(null, surname, null, 0, 0, 0);
 
-//    public int countByCondition(StudentCondition condition){
-//        return studentList.
-//    }
+        ComparatorSurname comp = new ComparatorSurname();
+
+        int i = 0;
+        for(Student s : studentList){
+            if(comp.compare(s, temp) == 0){
+                System.out.println("HERE");
+                return s;
+            }
+        }
+        System.out.println("Student not found.");
+        return null;
+    }
+
+    public List<Student> searchPartial(String string){
+        List<Student> toReturnList = new LinkedList<>();
+
+        for(Student s : studentList){
+            if(s.getName().toLowerCase().contains(string) || s.getSurname().toLowerCase().contains(string)){
+                toReturnList.add(s);
+            }
+        }
+        return toReturnList;
+    }
+
+    public int countByCondition(StudentCondition condition){
+        int countToReturn = 0;
+
+        for(Student s : studentList){
+            if(s.getCondition() == condition){
+                countToReturn++;
+            }
+        }
+        return countToReturn;
+    }
 
 
     // print info for list
@@ -76,13 +119,61 @@ public class Class {
        }
     }
 
+    public List<Student> sortByName(List<Student> list){
+        List<Student> toReturnList = new LinkedList<>();
+        toReturnList = list;
+        Collections.sort(list, new ComparatorSurname());
+        return list;
+    }
+
+    public List<Student> sortByScore(List<Student> list){
+        List<Student> toReturnList = new LinkedList<>();
+        toReturnList = list;
+        Collections.sort(list, new ComparatorScore());
+        Collections.reverse(list);
+        return list;
+    }
+
+    public Student max(){
+        return Collections.max(studentList, new ComparatorScore());
+    }
+
+    public double capacity(){
+        return 100*(studentList.size()/Double.valueOf(studentsLimit));
+    }
+
+
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Student> list){
+        this.studentList = list;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     private class ComparatorSurname implements Comparator<Student>{
 
         @Override
         public int compare(Student o1, Student o2) {
             return o1.getSurname().compareTo(o2.getSurname());
         }
-
     }
+
+    private class ComparatorScore implements Comparator<Student>{
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return Double.compare(o1.getScore(), o2.getScore());
+        }
+    }
+
+    public ComparatorScore getComparatorScore(){
+        return new ComparatorScore();
+    }
+
 
 }
