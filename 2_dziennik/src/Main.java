@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -57,6 +58,28 @@ public class Main {
             }
 
             container.summary();
+
+            Class group_3 = new Class("GROUP 3", 2);
+            Student student_3 = new Student("Katarzyna","Kowalska", condition_2, 2000, 400, 654321);
+
+            // adding an added student to group
+            group_1.addStudent(student_1);
+
+            group_1.addStudent(student_3);
+            List<Student> found = new LinkedList<>();
+            found = group_1.searchPartial("KOWALSK");
+            System.out.println("PRINTING AFTER PARTIAL SEARCH:");
+
+            for(Student s : found){
+                System.out.println(s.getName() + "  "+s.getSurname());
+            }
+
+            // student limit error
+
+            group_3.addStudent(student_1);
+            group_3.addStudent(student_2);
+            group_3.addStudent(student_3);
+
         }
     }
 

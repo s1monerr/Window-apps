@@ -20,7 +20,7 @@ public class Class {
         }
 
         else if(studentList.size() >= studentsLimit){
-            System.err.println("Error: group has already reached it's limit!");
+            System.err.println("Error: group " + name+" has already reached it's limit!");
             return false;
         }
 
@@ -92,7 +92,7 @@ public class Class {
         List<Student> toReturnList = new LinkedList<>();
 
         for(Student s : studentList){
-            if(s.getName().toLowerCase().contains(string) || s.getSurname().toLowerCase().contains(string)){
+            if(s.getName().toLowerCase().contains(string.toLowerCase()) || s.getSurname().toLowerCase().contains(string.toLowerCase(Locale.ROOT))){
                 toReturnList.add(s);
             }
         }
