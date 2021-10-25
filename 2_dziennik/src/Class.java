@@ -55,7 +55,7 @@ public class Class {
     public void changeCondition(Student student, StudentCondition condition){
         if (studentList.contains(student)) {
             student.setCondition(condition);
-            System.out.println("Points added successfully");
+            System.out.println("Condition changed successfully");
         }
         else{
             System.err.println("Error: student doesn't belong to group "+ name);

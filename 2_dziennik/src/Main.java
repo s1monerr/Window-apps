@@ -78,8 +78,33 @@ public class Main {
 
             group_3.addStudent(student_1);
             group_3.addStudent(student_2);
-            group_3.addStudent(student_3);
+            // ERROR
+           // group_3.addStudent(student_3);
 
+
+            // score adding
+            System.out.println("\n BEFORE SCORE ADDING: ");
+            student_1.print();
+            group_1.addPoints(student_1, 20);
+            System.out.println("\n AFTER SCORE ADDING: ");
+            student_1.print();
+            group_1.deletePoints(student_1, 30);
+            System.out.println("\n AFTER SCORE DELETING: ");
+            student_1.print();
+
+            // condition
+            System.out.println("Before condition change: "+group_1.countByCondition(condition_1));
+            System.out.println("After condidion change: ");
+            group_1.changeCondition(student_2, condition_1);
+            System.out.println("After condition change: "+group_1.countByCondition(condition_1));
+
+            // removing student
+            System.out.println("\n BEFORE REMOVING STUDENT: ");
+            group_1.print();
+
+            group_1.getStudent(student_1);
+            System.out.println("\n AFTER REMOVING STUDENT: ");
+            group_1.print();
         }
     }
 
