@@ -17,6 +17,8 @@ public class FirstOccuringTest {
     public void solutionTest(){
         Character expected = 'b';
         assertEquals(expected, firstOccure.solution("abcbab"));
+        expected = 'z';
+        assertEquals(expected, firstOccure.solution("azbcdefghijkz"));
         assertNull(firstOccure.solution("abcdef"));
     }
 
