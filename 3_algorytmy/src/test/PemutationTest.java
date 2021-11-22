@@ -8,8 +8,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class PemutationTest {
     public Permutations permutations;
@@ -18,12 +17,14 @@ public class PemutationTest {
         public void init(){permutations = new Permutations();}
 
     @Test
-    public void properResultTest(){
-//        Permutations permutations = new Permutations();
-//        LinkedList<Integer> list = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
-//        ListContainer container = new ListContainer();
-//        permutations.solution(list, 0, 3).print();
-        assert(true);
+    public void solutionTest(){
+        Permutations permutations = new Permutations();
+        LinkedList<Integer> list = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
+        System.out.println("expect: "+permutations.solution(list, 0, 3).get(0));
+        LinkedList<Integer> expected = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
+        LinkedList<Integer> expected2 = new LinkedList<Integer>(Arrays.asList(1, 3, 2));
+        assertEquals(permutations.solution(list, 0, 3).get(0), expected);
+        assertEquals(permutations.solution(list, 0, 3).get(1), expected);
     }
 
     @Test

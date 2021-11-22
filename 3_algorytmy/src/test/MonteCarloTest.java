@@ -14,7 +14,7 @@ public class MonteCarloTest {
 
     @Test
     public void positiveResultTest(){
-        for(int i = 1; i < 10000; i++) {
+        for(int i = 1; i < 10; i++) {
             System.out.println("monte = "+i+ monteCarloPi.solution(i));
             boolean tempValue = monteCarloPi.solution(i) > 0;
             assertTrue(tempValue);

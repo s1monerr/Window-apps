@@ -25,7 +25,10 @@ public class Main {
 //        }catch(NegativeNumberException e){
 //            System.err.println("Caught the exception: "+e);
 //        }
-
+        Permutations permutations = new Permutations();
+        LinkedList<Integer> list = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
+       // ListContainer container = new ListContainer();
+        permutations.solution(list, 0, 3).print();
         int[] array = {3, 4, 5,1,6};
         Pythogorean pythogorean = new Pythogorean();
         System.out.println(pythogorean.solution(array));

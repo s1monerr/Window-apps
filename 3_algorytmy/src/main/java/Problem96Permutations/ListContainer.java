@@ -5,10 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ListContainer {
-    private int size;
     private List<LinkedList<Integer>> container;
 
-    public ListContainer(int n){
+    public ListContainer(){
         container = new LinkedList<LinkedList<Integer>>();
     }
 
@@ -20,7 +19,13 @@ public class ListContainer {
     }
 
     public void addList(LinkedList<Integer> list){
+        // System.out.println("Added list: "+Arrays.toString(list.toArray()));
         container.add(list);
     }
+
+    public LinkedList<Integer> get(int index){
+        return container.get(index);
+    }
+
 
 }

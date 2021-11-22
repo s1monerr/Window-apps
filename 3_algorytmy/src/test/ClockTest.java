@@ -6,6 +6,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+//import org.junit.platform.suite.api.IncludePackages;
+//import org.junit.platform.suite.api.SelectPackages;
+//import org.junit.platform.suite.api.Suite;
+//
+//@Suite
+//@SelectPackages({"test.Clock"})
+//@IncludePackages({"test.Clock"})
+
 public class ClockTest {
     private Clock clock;
 
