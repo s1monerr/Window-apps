@@ -4,7 +4,7 @@ import java.util.LinkedList;
 public class StudentTableModel extends AbstractTableModel {
 
     private LinkedList<Student> students;
-    private final static String[] COLUMNS = {"Name", "Surname","Index"};;
+    private final static String[] COLUMNS = {"Name", "Surname", "Index", "Score", "Group"};;
     public StudentTableModel(LinkedList<Student> students) {
         this.students = students;
     }
@@ -16,7 +16,7 @@ public class StudentTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 3;
+        return 5;
     }
 
     @Override
@@ -32,6 +32,12 @@ public class StudentTableModel extends AbstractTableModel {
                 break;
             case 2:
                 value = student.getIndex();
+                break;
+            case 3:
+                value = student.getScore();
+                break;
+            case 4:
+                value = student.getGroup();
                 break;
         }
         return value;

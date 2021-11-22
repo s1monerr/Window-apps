@@ -4,8 +4,8 @@ public class ClassGroup {
     private String name;
 
 
-    private List<Student> studentList;
-    public final int studentsLimit;
+    private LinkedList<Student> studentList;
+    public int studentsLimit;
 
     public ClassGroup(String name, int studentsLimit){
         this.name = name;
@@ -144,11 +144,15 @@ public class ClassGroup {
     }
 
 
-    public List<Student> getStudentList() {
+    public LinkedList<Student> getStudentList() {
         return studentList;
     }
 
-    public void setStudentList(List<Student> list){
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setStudentList(LinkedList<Student> list){
         this.studentList = list;
     }
 
@@ -178,6 +182,10 @@ public class ClassGroup {
 
     public ComparatorScore getComparatorScore(){
         return new ComparatorScore();
+    }
+
+    public ComparatorSurname getComparatorSurname() {
+        return new ComparatorSurname();
     }
 
 

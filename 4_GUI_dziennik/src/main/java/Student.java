@@ -3,9 +3,32 @@ public class Student implements Comparable<Student>{
      private String name;
      private String surname;
      private StudentCondition studentCondition;
-     private int yearOfBirth;
+     private Integer yearOfBirth;
      private double score;
      private int index; // numer albumu studenta
+
+
+    private Integer group;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setYearOfBirth(Integer yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
     public Student(String name, String surname, int yearOfBirth, double score, int index) {
         this.name = name;
@@ -13,6 +36,7 @@ public class Student implements Comparable<Student>{
         this.yearOfBirth = yearOfBirth;
         this.score = score;
         this.index = index;
+        this.group = null;
     }
 
     @Override
@@ -60,7 +84,17 @@ public class Student implements Comparable<Student>{
         return studentCondition;
     }
 
-    public int getIndex() {
+    public Integer getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public Integer getIndex() {
         return index;
+    }
+
+    public Integer getGroup(){return group;}
+
+    public void setGroup(Integer group) {
+        this.group = group;
     }
 }
