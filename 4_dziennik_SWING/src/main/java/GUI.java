@@ -350,7 +350,7 @@ public class GUI extends JFrame {
                         getContentPane().removeAll();
                         add(groupError);
                         revalidate();
-                        repaint();
+                       repaint();
                     }
                 }
             });

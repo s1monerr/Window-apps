@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CourseInfoListController">
+   <children>
+      <TableView fx:id="courseInfoTable" layoutX="83.0" layoutY="93.0" prefHeight="200.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="course" prefWidth="96.0" text="Course" />
+          <TableColumn fx:id="average" prefWidth="129.0" text="Grade average" />
+            <TableColumn fx:id="condition" prefWidth="227.0" text="Condition" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Column X" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
