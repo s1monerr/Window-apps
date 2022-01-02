@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_LEFT" prefHeight="241.0" prefWidth="460.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.MainSceneController">
+<!--    <padding>-->
+<!--        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />-->
+<!--    </padding>-->
+
+          <Label fx:id="welcomeText" alignment="CENTER" prefHeight="54.0" prefWidth="251.0" text="Choose course to print grades.">
+      <font>
+         <Font name="KacstScreen" size="14.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
+   <AnchorPane prefHeight="132.0" prefWidth="460.0">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <children>
+      <!--    <Button onAction="#onHelloButtonClick" prefHeight="31.0" prefWidth="74.0" text="Hello!" />-->
+
+          <ComboBox fx:id="courseComboBox" accessibleRole="BUTTON" cacheShape="false" centerShape="false" layoutX="14.0" layoutY="-14.0" onAction="#handleCourseComboBoxAction" prefHeight="28.0" prefWidth="241.0" scaleShape="false" value="Choose course...">
+              <items>
+                  <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Nothin" />
+                  </FXCollections>
+              </items>
+            <effect>
+               <Blend />
+            </effect>
+            <cursor>
+               <Cursor fx:constant="CLOSED_HAND" />
+            </cursor>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+          </ComboBox>
+         <Button fx:id="changeInfoButton" layoutX="290.0" layoutY="-13.0" mnemonicParsing="false" onAction="#buttonInfoHandle" prefHeight="26.0" prefWidth="164.0" text="My courses settings" />
+         <Label layoutX="78.0" layoutY="31.0" text="STUDENT MANAGEMENT SYSTEM">
+            <font>
+               <Font name="System Bold Italic" size="18.0" />
+            </font>
+         </Label>
+         <Button fx:id="myInfoButton" contentDisplay="CENTER" layoutX="291.0" layoutY="69.0" mnemonicParsing="false" onAction="#myInfoButtonHandle" prefHeight="44.0" prefWidth="122.0" text="My info" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="69.0" />
+         <Button fx:id="mailButton" layoutX="15.0" layoutY="69.0" mnemonicParsing="false" onAction="#mailButtonHandle" prefHeight="44.0" prefWidth="241.0" text="Change email address" />
+      </children></AnchorPane>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+   <opaqueInsets>
+      <Insets top="-100.0" />
+   </opaqueInsets>
+</VBox>

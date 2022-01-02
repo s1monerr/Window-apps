@@ -1,0 +1,4 @@
+rm courseInfo
+rm student
+rm email
+rm student.ser

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="180.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MyInfoViewController">
+   <children>
+      <TableView fx:id="infoTable" layoutX="37.0" layoutY="56.0" prefHeight="67.0" prefWidth="435.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="90.0" text="First name" />
+          <TableColumn fx:id="surname" prefWidth="84.0" text="Last name" />
+            <TableColumn fx:id="index" prefWidth="59.0" text="Index" />
+            <TableColumn fx:id="email" prefWidth="200.0" text="E-mail address" />
+        </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="7.0" prefHeight="49.0" prefWidth="411.0" text="YOUR INFORMATION ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="131.0" prefHeight="24.0" prefWidth="265.0" text="Contact support if the data is not actual." />
+   </children>
+</AnchorPane>
